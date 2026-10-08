@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Nadiya Fathima - B.E. Engineering Student, aspiring software developer, and technology enthusiast.">
+  <meta name="author" content="Nadiya Fathima">
+  <title>Nadiya Fathima | Portfolio &amp; Developer Quest</title>
+
+  <!-- Google Fonts: Pixel (Press Start 2P, Silkscreen) + Modern Body (Outfit, Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-vertical-nav">
+
+  <!-- =========================================================
+       BACKDROP (FOR MOBILE DRAWER MENU)
+       ========================================================= -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       VERTICAL NAVIGATION BAR (LEFT SIDEBAR)
+       ========================================================= -->
+  <aside class="pixel-sidebar" id="pixel-sidebar" aria-label="Vertical Navigation Sidebar">
+    <!-- Sidebar Header & Pixel Brand -->
+    <div class="sidebar-header">
+      <a href="#hero" class="sidebar-brand" aria-label="Nadiya Portfolio Home">
+        <div class="brand-avatar-box">
+          <span class="brand-sprite" aria-hidden="true">&#128126;</span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">NADIYA.EXE</span>
+          <span class="brand-status">
+            <span class="pulse-dot" aria-hidden="true"></span> PLAYER 1
+          </span>
+        </div>
+      </a>
+
+      <!-- Close button on mobile -->
+      <button class="sidebar-close-btn" id="sidebar-close-btn" type="button" aria-label="Close navigation sidebar">
+        &times;
+      </button>
+    </div>
+
+    <!-- Quick Player Stats HUD inside Sidebar -->
+    <div class="sidebar-hud">
+      <div class="hud-stat-item">
+        <span class="hud-key">LVL</span>
+        <span class="hud-val">01</span>
+      </div>
+      <div class="hud-stat-item">
+        <span class="hud-key">CGPA</span>
+        <span class="hud-val">8.0</span>
+      </div>
+      <div class="hud-stat-item">
+        <span class="hud-key">HP</span>
+        <span class="hud-val">100%</span>
+      </div>
+    </div>
+
+    <!-- Navigation Menu (8 Required Links) -->
+    <nav class="sidebar-nav" aria-label="Main Section Navigation">
+      <ul class="sidebar-nav-list" id="sidebar-nav-list">
+        <!-- 1. Home -->
+        <li class="sidebar-nav-item">
+          <a href="#hero" class="sidebar-link active" data-section="hero" aria-current="page">
+            <span class="link-cursor" aria-hidden="true">&#9658;</span>
+            <span class="link-icon" aria-hidden="true">&#127968;</span>
+            <span class="link-label">Home</span>
+          </a>
+        </li>
+
+        <!-- 2. About Me -->
+        <li class="sidebar-nav-item">
+          <a href="#about" class="sidebar-link" data-section="about">
+            <span class="link-cursor" aria-hidden="true">&#9658;</span>
+            <span class="link-icon" aria-hidden="true">&#128100;</span>
+            <span class="link-label">About Me</span>
+          </a>
+        </li>
+
+        <!-- 3. Skills -->
+        <li class="sidebar-nav-item">
+          <a href="#skills" class="sidebar-link" data-section="skills">
+            <span class="link-cursor" aria-hidden="true">&#9658;</span>
+            <span class="link-icon" aria-hidden="true">&#9889;</span>
+            <span class="link-label">Skills</span>
+          </a>
+        </li>
+
+        <!-- 4. Timeline -->
+        <li class="sidebar-nav-item">
+          <a href="#timeline" class="sidebar-link" data-section="timeline">
+            <span class="link-cursor" aria-hidden="true">&#9658;</span>
+            <span class="link-icon" aria-hidden="true">&#9203;</span>
+            <span class="link-label">Timeline</span>
+          </a>
+        </li>
+
+        <!-- 5. Projects -->
+        <li class="sidebar-nav-item">
+          <a href="#projects" class="sidebar-link" data-section="projects">
+            <span class="link-cursor" aria-hidden="true">&#9658;</span>
+            <span class="link-icon" aria-hidden="true">&#9876;</span>
+            <span class="link-label">Projects</span>
+          </a>
+        </li>
+
+        <!-- 6. Testimonials -->
+        <li class="sidebar-nav-item">
+          <a href="#testimonials" class="sidebar-link" data-section="testimonials">
+            <span class="link-cursor" aria-hidden="true">&#9658;</span>
+            <span class="link-icon" aria-hidden="true">&#11088;</span>
+            <span class="link-label">Testimonials</span>
+          </a>
+        </li>
+
+        <!-- 7. Chat -->
+        <li class="sidebar-nav-item">
+          <a href="#chat" class="sidebar-link" data-section="chat">
+            <span class="link-cursor" aria-hidden="true">&#9658;</span>
+            <span class="link-icon" aria-hidden="true">&#128172;</span>
+            <span class="link-label">Chat</span>
+          </a>
+        </li>
+
+        <!-- 8. Contact -->
+        <li class="sidebar-nav-item">
+          <a href="#contact" class="sidebar-link" data-section="contact">
+            <span class="link-cursor" aria-hidden="true">&#9658;</span>
+            <span class="link-icon" aria-hidden="true">&#9993;</span>
+            <span class="link-label">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer: Night Mode Toggle & Controls -->
+    <div class="sidebar-footer">
+      <button
+        id="theme-toggle"
+        class="sidebar-theme-toggle"
+        type="button"
+        aria-label="Toggle night mode"
+        title="Toggle night mode"
+      >
+        <span class="toggle-icon-wrap" aria-hidden="true">
+          <!-- Moon Icon (Active in Light Theme) -->
+          <svg class="theme-icon icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Active in Dark Theme) -->
+          <svg class="theme-icon icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </span>
+        <span class="theme-toggle-text">NIGHT MODE</span>
+      </button>
+
+      <div class="sidebar-status-tag">
+        <span class="system-ready-dot"></span> SYSTEM READY
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================
+       PAGE WRAPPER (MAIN CONTENT OFFSETTED FOR SIDEBAR)
+       ========================================================= -->
+  <div class="page-content-wrapper">
+
+    <!-- Mobile Top Navigation Header -->
+    <header class="mobile-top-bar" id="mobile-top-bar">
+      <div class="mobile-bar-container">
+        <!-- Hamburger Menu Button -->
+        <button
+          class="pixel-hamburger-btn"
+          id="mobile-menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="pixel-sidebar"
+          aria-label="Open navigation sidebar"
+        >
+          <span class="pixel-bar"></span>
+          <span class="pixel-bar"></span>
+          <span class="pixel-bar"></span>
+        </button>
+
+        <a href="#hero" class="mobile-brand">
+          <span class="brand-code">&lt;</span>Nadiya<span class="brand-accent">.Portfolio</span><span class="brand-code">/&gt;</span>
+        </a>
+
+        <!-- Mobile Night Mode Toggle -->
+        <button
+          id="mobile-theme-toggle"
+          class="pixel-mini-toggle"
+          type="button"
+          aria-label="Toggle night mode"
+        >
+          <svg class="theme-icon icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Stream -->
+    <main id="main-content">
+
+      <!-- =========================================================
+           1. SECTION: HERO (PIXEL ART STYLE)
+           ========================================================= -->
+      <section id="hero" class="hero-section section" aria-labelledby="hero-title">
+        <div class="pixel-scanlines" aria-hidden="true"></div>
+        <div class="pixel-grid-overlay" aria-hidden="true"></div>
+
+        <div class="container hero-container">
+          <div class="hero-content">
+            <!-- Retro Pixel Status Badge -->
+            <div class="pixel-hud">
+              <span class="pixel-badge"><span class="pixel-dot pulse"></span> PLAYER 1 READY</span>
+              <span class="pixel-hud-stat"><span class="stat-label">LVL:</span> 01</span>
+              <span class="pixel-hud-stat"><span class="stat-label">CGPA:</span> 8.0</span>
+              <span class="pixel-hud-stat"><span class="stat-label">HP:</span> 100%</span>
+            </div>
+
+            <!-- Welcome Greeting & Title -->
+            <p class="hero-greeting">
+              <span class="prompt-arrow">&gt;</span> Welcome to my digital realm, I'm
+            </p>
+
+            <h1 id="hero-title" class="hero-name">
+              <span class="name-gradient">Nadiya Fathima</span>
+              <span class="pixel-cursor" aria-hidden="true">_</span>
+            </h1>
+
+            <!-- Subtitle & Tagline -->
+            <p class="hero-subtitle">
+              B.E. Engineering Student &amp; Aspiring Software Developer
+            </p>
+
+            <p class="hero-description">
+              Passionate about software craftsmanship, web architectures, and turning creative ideas into practical code. Currently exploring full-stack engineering, algorithms, and AI solutions with pixel-perfect attention to detail.
+            </p>
+
+            <!-- Pixel Art Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="pixel-btn pixel-btn-primary" id="hero-btn-projects">
+                <span class="btn-icon">&#9658;</span> View My Projects
+              </a>
+              <a href="#contact" class="pixel-btn pixel-btn-secondary" id="hero-btn-contact">
+                <span class="btn-icon">&#9993;</span> Get In Touch
+              </a>
+              <a href="nadiya_resume (1).pdf" class="pixel-btn pixel-btn-ghost" id="hero-btn-resume" download target="_blank">
+                <span class="btn-icon">&#128196;</span> Resume
+              </a>
+            </div>
+
+            <!-- Inventory / Tech Pills -->
+            <div class="hero-tech-strip">
+              <span class="tech-strip-title">&gt; INVENTORY:</span>
+              <div class="tech-pills">
+                <span class="pixel-pill">C</span>
+                <span class="pixel-pill">Python</span>
+                <span class="pixel-pill">Java</span>
+                <span class="pixel-pill">JavaScript</span>
+                <span class="pixel-pill">ReactJS</span>
+                <span class="pixel-pill">NodeJS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Media / Profile Avatar with Pixel Frame -->
+          <div class="hero-media">
+            <div class="pixel-frame-wrapper">
+              <div class="pixel-corner corner-tl" aria-hidden="true"></div>
+              <div class="pixel-corner corner-tr" aria-hidden="true"></div>
+              <div class="pixel-corner corner-bl" aria-hidden="true"></div>
+              <div class="pixel-corner corner-br" aria-hidden="true"></div>
+
+              <div class="pixel-avatar-box">
+                <img
+                  src="nadiya profile picture.jpeg"
+                  alt="Portrait of Nadiya Fathima - Software Developer"
+                  class="hero-avatar"
+                >
+                <div class="avatar-pixel-tag">
+                  <span>NADIYA.EXE</span>
+                  <span class="online-indicator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           2. SECTION: ABOUT ME (CLEAN, MINIMALISTIC PIXEL ART)
+           ========================================================= -->
+      <section id="about" class="about-section section" aria-labelledby="about-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-tag">&gt; GET TO KNOW ME</p>
+            <h2 id="about-title" class="section-title">About Me</h2>
+          </header>
+
+          <div class="about-grid">
+            <!-- Left Column: Profile Card -->
+            <div class="about-profile-card pixel-card">
+              <div class="profile-meta-info">
+                <h3 class="profile-name">Nadiya Fathima</h3>
+                <p class="profile-title">B.E. Engineering Student</p>
+                <p class="profile-college">Adichunchanagiri Institute of Technology</p>
+
+                <div class="profile-status-badge">
+                  <span class="live-status-dot"></span> Available for Internships
+                </div>
+
+                <ul class="profile-quick-facts" aria-label="Key details">
+                  <li><span class="fact-label">Role:</span> Aspiring Software Engineer</li>
+                  <li><span class="fact-label">Degree:</span> B.E. (2025 &ndash; 2029)</li>
+                  <li><span class="fact-label">Location:</span> Karnataka, India</li>
+                  <li><span class="fact-label">CGPA:</span> 8.0 / 10.0</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Column: Clean Bio, Career Highlights & Personal Interests -->
+            <div class="about-details-col">
+              <!-- Short Bio Card -->
+              <div class="about-bio-card pixel-card">
+                <h3 class="about-card-title">&gt; Biography</h3>
+                <p class="about-lead-text">
+                  Hello! I'm <strong>Nadiya Fathima</strong>, a software engineering student driven by curiosity and a commitment to writing clean, maintainable code. I love exploring the intersection of distributed systems, modern web architectures, and practical computing solutions.
+                </p>
+                <p class="about-sub-text">
+                  Whether crafting full-stack web applications, designing relational database schemas, or experimenting with intelligent algorithms, I focus on solving real-world problems with clarity, performance, and attention to detail.
+                </p>
+              </div>
+
+              <!-- Career Highlights & Milestones -->
+              <div class="about-highlights-card pixel-card">
+                <h3 class="about-card-title">&gt; Career Highlights</h3>
+                <div class="highlights-grid">
+                  <div class="highlight-item">
+                    <span class="highlight-icon">&#128170;</span>
+                    <div class="highlight-content">
+                      <h4 class="highlight-title">AI Internship @ Pantech</h4>
+                      <p class="highlight-desc">Applied machine learning algorithms to real-world data and practical computer vision tasks.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-item">
+                    <span class="highlight-icon">&#128187;</span>
+                    <div class="highlight-content">
+                      <h4 class="highlight-title">Full-Stack Development</h4>
+                      <p class="highlight-desc">Completed hands-on web training at Free Coding Camp, mastering client-server architectures.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-item">
+                    <span class="highlight-icon">&#128218;</span>
+                    <div class="highlight-content">
+                      <h4 class="highlight-title">Academic Excellence</h4>
+                      <p class="highlight-desc">Maintained 8.0 CGPA at AIT with 89% in Pre-University and 87% in Secondary School.</p>
+                    </div>
+                  </div>
+
+                  <div class="highlight-item">
+                    <span class="highlight-icon">&#128736;</span>
+                    <div class="highlight-content">
+                      <h4 class="highlight-title">3+ Production-Ready Projects</h4>
+                      <p class="highlight-desc">Engineered Smart Campus Management, AI Expense Tracker, and IoT Energy Monitoring System.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Personal Interests & Passions -->
+              <div class="about-interests-card pixel-card">
+                <h3 class="about-card-title">&gt; Personal Interests</h3>
+                <p class="interests-intro">Beyond technical coursework, here are the hobbies and pursuits that fuel my creativity:</p>
+                <div class="interests-tags-group">
+                  <span class="interest-pill"><span class="interest-icon">&#128377;</span> Retro Game &amp; Pixel UI Design</span>
+                  <span class="interest-pill"><span class="interest-icon">&#129513;</span> Algorithmic Problem Solving</span>
+                  <span class="interest-pill"><span class="interest-icon">&#9881;</span> IoT &amp; Embedded Systems</span>
+                  <span class="interest-pill"><span class="interest-icon">&#127760;</span> Open-Source Tech Exploring</span>
+                  <span class="interest-pill"><span class="interest-icon">&#128214;</span> Technical Reading &amp; Mentoring</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           3. SECTION: SKILLS & COMPETENCIES (PIXEL ART GAUGES & BARS)
+           ========================================================= -->
+      <section id="skills" class="skills-section section" aria-labelledby="skills-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-tag">&gt; TECHNICAL ARSENAL &amp; STATS</p>
+            <h2 id="skills-title" class="section-title">Skills &amp; Competencies</h2>
+          </header>
+
+          <!-- Skills Overview Status Strip / Player HUD -->
+          <div class="skills-hud-banner pixel-card" aria-label="Skills Summary HUD">
+            <div class="skills-hud-col">
+              <span class="hud-mini-label">TOTAL COMPETENCIES</span>
+              <span class="hud-mini-val">&#128170; 12+ TECHNOLOGIES</span>
+            </div>
+            <div class="skills-hud-col">
+              <span class="hud-mini-label">PRIMARY FOCUS</span>
+              <span class="hud-mini-val">&#128736; FULL-STACK &amp; SYSTEMS</span>
+            </div>
+            <div class="skills-hud-col">
+              <span class="hud-mini-label">AVERAGE PROFICIENCY</span>
+              <span class="hud-mini-val">&#11088; 84% ADVANCED LEVEL</span>
+            </div>
+          </div>
+
+          <!-- 4 Core Competency Categories Grid -->
+          <div class="skills-categories-grid">
+
+            <!-- =======================================================
+                 CATEGORY 1: PROGRAMMING LANGUAGES
+                 Represents core computational logic, algorithm design,
+                 and language syntax proficiency.
+                 ======================================================= -->
+            <div class="skill-category-card pixel-card" aria-labelledby="cat-lang-title">
+              <header class="category-card-header">
+                <span class="category-card-icon" aria-hidden="true">&#128187;</span>
+                <div>
+                  <h3 id="cat-lang-title" class="category-heading">Languages</h3>
+                  <span class="category-sub">Core Logic &amp; Syntax</span>
+                </div>
+              </header>
+
+              <div class="skills-gauge-list">
+                <!-- Skill 1.1: Python - Versatile scripting, AI & data processing -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128013;</span>
+                      <strong class="skill-name">Python</strong>
+                    </span>
+                    <span class="skill-exp-badge">85% &bull; ADVANCED</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Python Proficiency: 85%">
+                    <div class="pixel-progress-fill bar-cyan" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 1.2: Java - Object-Oriented software engineering principles -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#9749;</span>
+                      <strong class="skill-name">Java</strong>
+                    </span>
+                    <span class="skill-exp-badge">80% &bull; PROFICIENT</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Java Proficiency: 80%">
+                    <div class="pixel-progress-fill bar-purple" style="width: 80%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 1.3: C - Low-level systems, pointers & memory concepts -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#9881;</span>
+                      <strong class="skill-name">C Language</strong>
+                    </span>
+                    <span class="skill-exp-badge">85% &bull; STRONG BASE</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="C Proficiency: 85%">
+                    <div class="pixel-progress-fill bar-gold" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 1.4: JavaScript - Modern asynchronous scripting & DOM logic -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#9889;</span>
+                      <strong class="skill-name">JavaScript (ES6+)</strong>
+                    </span>
+                    <span class="skill-exp-badge">82% &bull; DYNAMIC</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript Proficiency: 82%">
+                    <div class="pixel-progress-fill bar-magenta" style="width: 82%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- =======================================================
+                 CATEGORY 2: FRONTEND & FRAMEWORKS
+                 Represents user interface craftsmanship, component
+                 architecture, accessibility, and modern responsive design.
+                 ======================================================= -->
+            <div class="skill-category-card pixel-card" aria-labelledby="cat-front-title">
+              <header class="category-card-header">
+                <span class="category-card-icon" aria-hidden="true">&#127760;</span>
+                <div>
+                  <h3 id="cat-front-title" class="category-heading">Frontend &amp; UI</h3>
+                  <span class="category-sub">Interactive Interfaces</span>
+                </div>
+              </header>
+
+              <div class="skills-gauge-list">
+                <!-- Skill 2.1: ReactJS - Component state, hooks, and virtual DOM -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#9883;</span>
+                      <strong class="skill-name">ReactJS</strong>
+                    </span>
+                    <span class="skill-exp-badge">80% &bull; MODULAR UI</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="ReactJS Proficiency: 80%">
+                    <div class="pixel-progress-fill bar-cyan" style="width: 80%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 2.2: HTML5 & CSS3 - Semantic structure & modern style rules -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#127912;</span>
+                      <strong class="skill-name">HTML5 &amp; CSS3</strong>
+                    </span>
+                    <span class="skill-exp-badge">92% &bull; SEMANTIC</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 & CSS3 Proficiency: 92%">
+                    <div class="pixel-progress-fill bar-magenta" style="width: 92%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 2.3: Responsive & Pixel UI - Cross-device adaptable layouts -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128241;</span>
+                      <strong class="skill-name">Responsive Design</strong>
+                    </span>
+                    <span class="skill-exp-badge">88% &bull; PIXEL-PERFECT</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design: 88%">
+                    <div class="pixel-progress-fill bar-purple" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 2.4: Web Accessibility - a11y, semantic tags & focus states -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128065;</span>
+                      <strong class="skill-name">Web a11y &amp; Usability</strong>
+                    </span>
+                    <span class="skill-exp-badge">80% &bull; STANDARDS</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Web Accessibility: 80%">
+                    <div class="pixel-progress-fill bar-emerald" style="width: 80%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- =======================================================
+                 CATEGORY 3: BACKEND & DATABASES
+                 Represents server runtime, API routing, relational schemas,
+                 and database query optimization.
+                 ======================================================= -->
+            <div class="skill-category-card pixel-card" aria-labelledby="cat-back-title">
+              <header class="category-card-header">
+                <span class="category-card-icon" aria-hidden="true">&#128452;</span>
+                <div>
+                  <h3 id="cat-back-title" class="category-heading">Backend &amp; DB</h3>
+                  <span class="category-sub">Services &amp; Storage</span>
+                </div>
+              </header>
+
+              <div class="skills-gauge-list">
+                <!-- Skill 3.1: NodeJS & Express - Backend HTTP routes & event loop -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128994;</span>
+                      <strong class="skill-name">NodeJS &amp; Express</strong>
+                    </span>
+                    <span class="skill-exp-badge">78% &bull; ASYNC I/O</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="NodeJS Proficiency: 78%">
+                    <div class="pixel-progress-fill bar-emerald" style="width: 78%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 3.2: MySQL - Relational tables, indexing, and joins -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128044;</span>
+                      <strong class="skill-name">MySQL</strong>
+                    </span>
+                    <span class="skill-exp-badge">85% &bull; RELATIONAL DB</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL Proficiency: 85%">
+                    <div class="pixel-progress-fill bar-cyan" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 3.3: Oracle DB - SQL schemas and enterprise database systems -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#127963;</span>
+                      <strong class="skill-name">Oracle Database</strong>
+                    </span>
+                    <span class="skill-exp-badge">75% &bull; ENTERPRISE SQL</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Oracle Database Proficiency: 75%">
+                    <div class="pixel-progress-fill bar-gold" style="width: 75%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 3.4: RESTful APIs - CRUD endpoints & data serialisation -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128268;</span>
+                      <strong class="skill-name">RESTful APIs</strong>
+                    </span>
+                    <span class="skill-exp-badge">80% &bull; CRUD PROTOCOLS</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="RESTful APIs: 80%">
+                    <div class="pixel-progress-fill bar-purple" style="width: 80%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- =======================================================
+                 CATEGORY 4: TOOLS & WORKFLOW
+                 Represents developer productivity, git version control,
+                 command line proficiency, and project tooling.
+                 ======================================================= -->
+            <div class="skill-category-card pixel-card" aria-labelledby="cat-tools-title">
+              <header class="category-card-header">
+                <span class="category-card-icon" aria-hidden="true">&#128295;</span>
+                <div>
+                  <h3 id="cat-tools-title" class="category-heading">Tools &amp; Workflow</h3>
+                  <span class="category-sub">DevOps &amp; Ecosystem</span>
+                </div>
+              </header>
+
+              <div class="skills-gauge-list">
+                <!-- Skill 4.1: Git & GitHub - Branch management, PRs, and commit hygiene -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128025;</span>
+                      <strong class="skill-name">Git &amp; GitHub</strong>
+                    </span>
+                    <span class="skill-exp-badge">88% &bull; VERSION CONTROL</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Git Proficiency: 88%">
+                    <div class="pixel-progress-fill bar-cyan" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 4.2: VS Code - Extensions, linting, debugging environment -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128221;</span>
+                      <strong class="skill-name">VS Code Environment</strong>
+                    </span>
+                    <span class="skill-exp-badge">90% &bull; WORKFLOW IDE</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="VS Code: 90%">
+                    <div class="pixel-progress-fill bar-purple" style="width: 90%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 4.3: Microsoft Excel - Data analysis and tabular modeling -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128202;</span>
+                      <strong class="skill-name">Microsoft Excel</strong>
+                    </span>
+                    <span class="skill-exp-badge">85% &bull; DATA MODELING</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Excel: 85%">
+                    <div class="pixel-progress-fill bar-emerald" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <!-- Skill 4.4: Command Line / Shell - Scripting and terminal navigation -->
+                <div class="skill-gauge-item">
+                  <div class="gauge-label-row">
+                    <span class="skill-name-wrap">
+                      <span class="skill-cursor" aria-hidden="true">&#9658;</span>
+                      <span class="skill-icon">&#128039;</span>
+                      <strong class="skill-name">CLI &amp; Shell Scripting</strong>
+                    </span>
+                    <span class="skill-exp-badge">75% &bull; TERMINAL</span>
+                  </div>
+                  <div class="pixel-progress-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="CLI & Shell: 75%">
+                    <div class="pixel-progress-fill bar-gold" style="width: 75%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- End skills-categories-grid -->
+
+          <!-- Complementary Core Conceptual Competencies Badge Cloud -->
+          <div class="skills-concepts-wrapper pixel-card">
+            <h3 class="concepts-title">&gt; THEORETICAL &amp; ARCHITECTURAL COMPETENCIES</h3>
+            <p class="concepts-sub">Core computer science principles practiced across projects:</p>
+            <div class="concepts-badges-list">
+              <span class="concept-badge"><span class="badge-dot"></span> Data Structures &amp; Algorithms</span>
+              <span class="concept-badge"><span class="badge-dot"></span> Object-Oriented Programming (OOP)</span>
+              <span class="concept-badge"><span class="badge-dot"></span> Database Normalization &amp; Schemas</span>
+              <span class="concept-badge"><span class="badge-dot"></span> Asynchronous Event Loops</span>
+              <span class="concept-badge"><span class="badge-dot"></span> Frontend State Management</span>
+              <span class="concept-badge"><span class="badge-dot"></span> Responsive Mobile-First Design</span>
+              <span class="concept-badge"><span class="badge-dot"></span> Collaborative Git Workflows</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           4. SECTION: TIMELINE (EDUCATION & CAREER QUESTS)
+           ========================================================= -->
+      <section id="timeline" class="timeline-section section" aria-labelledby="timeline-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-tag">&gt; JOURNEY &amp; MILESTONES</p>
+            <h2 id="timeline-title" class="section-title">Timeline</h2>
+          </header>
+
+          <div class="timeline-container">
+            <ol class="timeline-list">
+              <!-- B.E. Milestone -->
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content pixel-card">
+                  <span class="timeline-date">2025 - 2029</span>
+                  <h3 class="timeline-role">Bachelor of Engineering (B.E.)</h3>
+                  <span class="timeline-company">@ Adichunchanagiri Institute of Technology</span>
+                  <p class="timeline-summary">
+                    Currently pursuing B.E. with a <strong>CGPA of 8.0/10</strong>. Mastering core computing paradigms including data structures, algorithms, databases, and software design.
+                  </p>
+                </div>
+              </li>
+
+              <!-- AI Internship Milestone -->
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content pixel-card">
+                  <span class="timeline-date">Internship</span>
+                  <h3 class="timeline-role">AI Intern</h3>
+                  <span class="timeline-company">@ Pantech</span>
+                  <p class="timeline-summary">
+                    Gained applied artificial intelligence experience, exploring machine learning concepts and executing practical technical assignments.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Full-Stack Training Milestone -->
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content pixel-card">
+                  <span class="timeline-date">Training</span>
+                  <h3 class="timeline-role">Full-Stack Web Development</h3>
+                  <span class="timeline-company">@ Free Coding Camp</span>
+                  <p class="timeline-summary">
+                    Engineered responsive client-server web apps, applying HTML5, modern CSS, and JavaScript.
+                  </p>
+                </div>
+              </li>
+
+              <!-- 2nd PUC Milestone -->
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content pixel-card">
+                  <span class="timeline-date">2022 - 2024</span>
+                  <h3 class="timeline-role">2nd PUC (Pre-University)</h3>
+                  <span class="timeline-company">@ Sri Sai Angels PU College</span>
+                  <p class="timeline-summary">
+                    Completed Pre-University science education scoring <strong>89%</strong>.
+                  </p>
+                </div>
+              </li>
+
+              <!-- SSLC Milestone -->
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content pixel-card">
+                  <span class="timeline-date">2022</span>
+                  <h3 class="timeline-role">SSLC (Secondary Education)</h3>
+                  <span class="timeline-company">@ Model English High School</span>
+                  <p class="timeline-summary">
+                    Graduated secondary school with an academic performance of <strong>87%</strong>.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           5. SECTION: PROJECTS
+           ========================================================= -->
+      <section id="projects" class="projects-section section" aria-labelledby="projects-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-tag">&gt; MISSION LOG</p>
+            <h2 id="projects-title" class="section-title">Featured Projects</h2>
+          </header>
+
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card pixel-card" aria-labelledby="project-1-title">
+              <div class="project-media-banner">
+                <span class="project-badge">CAMPUS APP</span>
+                <span class="project-icon">&#127979;</span>
+              </div>
+              <div class="project-body">
+                <h3 id="project-1-title" class="project-title">Smart Campus Management System</h3>
+                <p class="project-description">
+                  A unified digital platform designed to administer student attendance, classroom events, notices, and faculty-student collaboration in a centralized hub.
+                </p>
+                <ul class="project-tech-tags" aria-label="Technologies used">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                  <li>NodeJS</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#projects" class="pixel-link-btn">Demo &rarr;</a>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="pixel-link-btn">GitHub &rarr;</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card pixel-card" aria-labelledby="project-2-title">
+              <div class="project-media-banner">
+                <span class="project-badge">AI &amp; FINANCE</span>
+                <span class="project-icon">&#128184;</span>
+              </div>
+              <div class="project-body">
+                <h3 id="project-2-title" class="project-title">AI-Powered Personal Expense Tracker</h3>
+                <p class="project-description">
+                  An automated budget management application analyzing recurring expense patterns, providing smart spending categories and custom savings insights.
+                </p>
+                <ul class="project-tech-tags" aria-label="Technologies used">
+                  <li>Python</li>
+                  <li>AI</li>
+                  <li>JavaScript</li>
+                  <li>MySQL</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#projects" class="pixel-link-btn">Demo &rarr;</a>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="pixel-link-btn">GitHub &rarr;</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card pixel-card" aria-labelledby="project-3-title">
+              <div class="project-media-banner">
+                <span class="project-badge">IOT &amp; ENERGY</span>
+                <span class="project-icon">&#9889;</span>
+              </div>
+              <div class="project-body">
+                <h3 id="project-3-title" class="project-title">IoT-Based Smart Energy Monitoring</h3>
+                <p class="project-description">
+                  An IoT telemetry system logging real-time kilowatt-hour draw, forecasting monthly utility expenditure, and sounding alerts during voltage abnormalities.
+                </p>
+                <ul class="project-tech-tags" aria-label="Technologies used">
+                  <li>IoT</li>
+                  <li>JavaScript</li>
+                  <li>NodeJS</li>
+                  <li>Database</li>
+                </ul>
+                <div class="project-links">
+                  <a href="#projects" class="pixel-link-btn">Demo &rarr;</a>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="pixel-link-btn">GitHub &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           6. SECTION: TESTIMONIALS (NEW)
+           ========================================================= -->
+      <section id="testimonials" class="testimonials-section section" aria-labelledby="testimonials-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-tag">&gt; REPUTATION &amp; REVIEWS</p>
+            <h2 id="testimonials-title" class="section-title">Testimonials</h2>
+          </header>
+
+          <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card pixel-card">
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                <span class="pixel-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-badge">VERIFIED</span>
+              </div>
+              <p class="testimonial-text">
+                &ldquo;Nadiya exhibits high curiosity and great technical instincts. Her disciplined focus on software architecture and engineering fundamentals shines in every academic challenge.&rdquo;
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">&#128104;&#8205;&#127979;</div>
+                <div class="author-info">
+                  <h4 class="author-name">Faculty Mentor</h4>
+                  <span class="author-role">Dept. of Computer Science &amp; Eng.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card pixel-card">
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                <span class="pixel-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-badge">TEAMMATE</span>
+              </div>
+              <p class="testimonial-text">
+                &ldquo;Partnering with Nadiya on our Campus Management project made collaboration seamless. She solved frontend edge cases quickly and wrote clean, understandable logic.&rdquo;
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">&#128105;&#8205;&#128187;</div>
+                <div class="author-info">
+                  <h4 class="author-name">Project Collaborator</h4>
+                  <span class="author-role">Engineering Peer &amp; Developer</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card pixel-card">
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                <span class="pixel-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-badge">INTERNSHIP</span>
+              </div>
+              <p class="testimonial-text">
+                &ldquo;During her AI training, Nadiya demonstrated strong problem solving and was eager to learn modern frameworks. She has genuine potential as an upcoming software engineer.&rdquo;
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">&#128188;</div>
+                <div class="author-info">
+                  <h4 class="author-name">Technical Lead</h4>
+                  <span class="author-role">Pantech Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           7. SECTION: CHAT (INTERACTIVE PIXEL TERMINAL)
+           ========================================================= -->
+      <section id="chat" class="chat-section section" aria-labelledby="chat-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-tag">&gt; 8-BIT TRANSMISSION</p>
+            <h2 id="chat-title" class="section-title">Live Chat Terminal</h2>
+          </header>
+
+          <div class="chat-terminal-wrapper pixel-card">
+            <!-- Terminal Title Bar -->
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">NADIYA_BOT v1.0 [READY]</div>
+              <div class="terminal-status">&#9679; ONLINE</div>
+            </div>
+
+            <!-- Terminal Message Window -->
+            <div class="terminal-messages" id="terminal-messages" aria-live="polite">
+              <div class="chat-msg bot-msg">
+                <span class="msg-avatar">&#129302;</span>
+                <div class="msg-content">
+                  <span class="msg-sender">NADIYA_BOT:</span>
+                  <p>Greetings, Traveler! I'm Nadiya's interactive assistant. Ask me about her skills, projects, or how to get in touch!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Preset Buttons -->
+            <div class="chat-quick-actions" aria-label="Quick questions">
+              <button type="button" class="quick-chip" data-query="Who is Nadiya?">
+                &gt; Who is Nadiya?
+              </button>
+              <button type="button" class="quick-chip" data-query="Show Tech Stack">
+                &gt; Tech Stack
+              </button>
+              <button type="button" class="quick-chip" data-query="Are you available for internships?">
+                &gt; Internships?
+              </button>
+              <button type="button" class="quick-chip" data-query="Fun Fact">
+                &gt; Fun Fact
+              </button>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form class="terminal-input-form" id="terminal-chat-form">
+              <span class="terminal-prompt" aria-hidden="true">&gt;&gt;</span>
+              <input
+                type="text"
+                id="terminal-chat-input"
+                class="terminal-input"
+                placeholder="Ask Nadiya a question..."
+                autocomplete="off"
+                required
+              >
+              <button type="submit" class="pixel-btn pixel-btn-primary chat-send-btn">
+                SEND
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           8. SECTION: CONTACT
+           ========================================================= -->
+      <section id="contact" class="contact-section section" aria-labelledby="contact-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-tag">&gt; TRANSMIT MESSAGE</p>
+            <h2 id="contact-title" class="section-title">Get In Touch</h2>
+          </header>
+
+          <div class="contact-wrapper">
+            <div class="contact-info pixel-card">
+              <p class="contact-text">
+                Whether you have an inquiry, open role, or collaboration idea, feel free to transmit a signal. My inbox is always open!
+              </p>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <span class="contact-icon">&#9993;</span>
+                  <div>
+                    <strong>Email:</strong>
+                    <a href="mailto:nadiyafathima3005@gmail.com">nadiyafathima3005@gmail.com</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">&#128222;</span>
+                  <div>
+                    <strong>Phone:</strong>
+                    <a href="tel:+918269688252">+91 8269688252</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">&#128205;</span>
+                  <div>
+                    <strong>Location:</strong>
+                    <span>Karnataka, India</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form pixel-card" id="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="contact-name">&gt; Your Name</label>
+                <input type="text" id="contact-name" name="name" required placeholder="Player One">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">&gt; Your Email</label>
+                <input type="email" id="contact-email" name="email" required placeholder="player@domain.com">
+              </div>
+              <div class="form-group">
+                <label for="contact-message">&gt; Message Transmission</label>
+                <textarea id="contact-message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+              </div>
+              <button type="submit" class="pixel-btn pixel-btn-primary" id="contact-submit-btn">
+                <span class="btn-icon">&#128640;</span> Send Transmission
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer class="site-footer" id="site-footer">
+      <div class="container footer-container">
+        <div class="footer-meta">
+          <p>&copy; <span id="current-year">2026</span> Nadiya Fathima. All rights reserved.</p>
+          <p class="footer-subtext">Built with Semantic HTML5, Pixel Art CSS &amp; JavaScript.</p>
+        </div>
+
+        <ul class="footer-social-links" aria-label="Social and professional links">
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a></li>
+        </ul>
+
+        <a href="#hero" class="pixel-back-to-top" aria-label="Back to top of page">&uarr; TOP</a>
+      </div>
+    </footer>
+
+  </div> <!-- End page-content-wrapper -->
+
+  <!-- =========================================================
+       JAVASCRIPT: SIDEBAR, THEME & CHAT INTERACTIONS
+       ========================================================= -->
+  <script>
+    // 1. Dynamic copyright year
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    // 2. Night Mode Detection via CSS Media Queries + Manual Toggle
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const mobileThemeToggleBtn = document.getElementById("mobile-theme-toggle");
+    const htmlElement = document.documentElement;
+
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function getPreferredTheme() {
+      const stored = localStorage.getItem("portfolio-theme");
+      if (stored === "dark" || stored === "light") return stored;
+      return systemPrefersDark.matches ? "dark" : "light";
+    }
+
+    function applyTheme(theme) {
+      htmlElement.setAttribute("data-theme", theme);
+      const isDark = theme === "dark";
+      const label = isDark ? "Switch to light mode" : "Switch to night mode";
+      if (themeToggleBtn) {
+        themeToggleBtn.setAttribute("aria-label", label);
+        themeToggleBtn.setAttribute("title", label);
+      }
+      if (mobileThemeToggleBtn) {
+        mobileThemeToggleBtn.setAttribute("aria-label", label);
+      }
+    }
+
+    applyTheme(getPreferredTheme());
+
+    systemPrefersDark.addEventListener("change", (e) => {
+      if (!localStorage.getItem("portfolio-theme")) {
+        applyTheme(e.matches ? "dark" : "light");
+      }
+    });
+
+    function toggleThemeHandler() {
+      const current = htmlElement.getAttribute("data-theme") || (systemPrefersDark.matches ? "dark" : "light");
+      const next = current === "dark" ? "light" : "dark";
+      localStorage.setItem("portfolio-theme", next);
+      applyTheme(next);
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener("click", toggleThemeHandler);
+    if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener("click", toggleThemeHandler);
+
+    // 3. Vertical Sidebar Drawer (Mobile Open / Close)
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const sidebarCloseBtn = document.getElementById("sidebar-close-btn");
+    const sidebar = document.getElementById("pixel-sidebar");
+    const backdrop = document.getElementById("sidebar-backdrop");
+
+    function openSidebar() {
+      sidebar.classList.add("open");
+      backdrop.classList.add("active");
+      mobileMenuToggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("sidebar-locked");
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove("open");
+      backdrop.classList.remove("active");
+      mobileMenuToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("sidebar-locked");
+    }
+
+    if (mobileMenuToggle) mobileMenuToggle.addEventListener("click", openSidebar);
+    if (sidebarCloseBtn) sidebarCloseBtn.addEventListener("click", closeSidebar);
+    if (backdrop) backdrop.addEventListener("click", closeSidebar);
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && sidebar.classList.contains("open")) {
+        closeSidebar();
+      }
+    });
+
+    // 4. ScrollSpy: Highlight active link in vertical navbar
+    const navLinks = document.querySelectorAll(".sidebar-link");
+    const sections = Array.from(navLinks).map(link => {
+      const id = link.getAttribute("href").substring(1);
+      return document.getElementById(id);
+    }).filter(Boolean);
+
+    function updateActiveNav() {
+      const scrollPos = window.scrollY + 180;
+      let currentSection = sections[0];
+
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPos) {
+          currentSection = section;
+        }
+      }
+
+      if (currentSection) {
+        const activeId = currentSection.id;
+        navLinks.forEach(link => {
+          if (link.getAttribute("href") === `#${activeId}`) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.classList.remove("active");
+            link.removeAttribute("aria-current");
+          }
+        });
+      }
+    }
+
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    // Close sidebar on link click (mobile)
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          closeSidebar();
+        }
+      });
+    });
+
+    // 5. Interactive Pixel Chat Terminal
+    const chatForm = document.getElementById("terminal-chat-form");
+    const chatInput = document.getElementById("terminal-chat-input");
+    const messagesContainer = document.getElementById("terminal-messages");
+    const quickChips = document.querySelectorAll(".quick-chip");
+
+    const botKnowledge = {
+      "who": "Nadiya Fathima is a B.E. student at Adichunchanagiri Institute of Technology (CGPA 8.0) passionate about software engineering, frontend, and backend development!",
+      "tech": "Nadiya commands C, Python, Java, JavaScript, ReactJS, NodeJS, MySQL, Oracle, Git, and HTML5/CSS3.",
+      "intern": "Yes! Nadiya is actively seeking software engineering internships and collaborative technology opportunities. Use the Contact section to reach out!",
+      "fun": "Nadiya loves pixel art aesthetics, gaming lore, and converting tricky algorithms into clean code one line at a time!",
+      "default": "Message received! Nadiya will review your quest transmission soon. Feel free to send an email directly to nadiyafathima3005@gmail.com!"
+    };
+
+    function appendMessage(sender, text, isBot = false) {
+      const msgDiv = document.createElement("div");
+      msgDiv.className = `chat-msg ${isBot ? "bot-msg" : "user-msg"}`;
+      msgDiv.innerHTML = `
+        <span class="msg-avatar">${isBot ? "&#129302;" : "&#128100;"}</span>
+        <div class="msg-content">
+          <span class="msg-sender">${sender}:</span>
+          <p>${text}</p>
+        </div>
+      `;
+      messagesContainer.appendChild(msgDiv);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function processChatQuery(query) {
+      appendMessage("YOU", query, false);
+
+      const q = query.toLowerCase();
+      let response = botKnowledge["default"];
+      if (q.includes("who") || q.includes("nadiya") || q.includes("about")) {
+        response = botKnowledge["who"];
+      } else if (q.includes("tech") || q.includes("skill") || q.includes("stack") || q.includes("language")) {
+        response = botKnowledge["tech"];
+      } else if (q.includes("intern") || q.includes("hire") || q.includes("job") || q.includes("available")) {
+        response = botKnowledge["intern"];
+      } else if (q.includes("fun") || q.includes("fact") || q.includes("game")) {
+        response = botKnowledge["fun"];
+      }
+
+      // Simulate typing delay
+      setTimeout(() => {
+        appendMessage("NADIYA_BOT", response, true);
+      }, 450);
+    }
+
+    if (chatForm) {
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const text = chatInput.value.trim();
+        if (text) {
+          processChatQuery(text);
+          chatInput.value = "";
+        }
+      });
+    }
+
+    quickChips.forEach(chip => {
+      chip.addEventListener("click", () => {
+        const query = chip.getAttribute("data-query");
+        processChatQuery(query);
+      });
+    });
+  </script>
+</body>
+</html>
